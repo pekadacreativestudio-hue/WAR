@@ -6,9 +6,15 @@ const ParticleBackground = () => {
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; duration: number; delay: number; tx: number; ty: number }>>([]);
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    const particleCount = isSmallScreen ? 18 : 40;
+
     const generateParticles = () => {
       const newParticles = [];
-      for (let i = 0; i < 80; i++) {
+      for (let i = 0; i < particleCount; i++) {
         newParticles.push({
           id: i,
           x: Math.random() * 100,
@@ -29,11 +35,11 @@ const ParticleBackground = () => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none bg-[#0a0a0a] z-[-1]">
       {/* Smoky radial gradients & textures */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a1410] via-[#0a0a0a] to-black opacity-90" />
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1542401886-65d6c61de115?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10 mix-blend-screen" />
-      
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1542401886-65d6c61de115?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10" />
+
       {/* Glowing accents */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#3a1800] rounded-full mix-blend-screen filter blur-[150px] opacity-40 animate-[pulse_6s_ease-in-out_infinite]" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#d4af37] rounded-full mix-blend-screen filter blur-[180px] opacity-10 animate-[pulse_8s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#3a1800] rounded-full filter blur-[80px] opacity-40 motion-safe:animate-[pulse_6s_ease-in-out_infinite]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#d4af37] rounded-full filter blur-[90px] opacity-10 motion-safe:animate-[pulse_8s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-t from-black via-transparent to-black opacity-90" />
 
       {/* Crosshairs in corners (Military touch) */}
@@ -52,7 +58,7 @@ const ParticleBackground = () => {
             top: `${p.y}%`,
             width: p.size,
             height: p.size,
-            boxShadow: '0 0 12px #d4af37, 0 0 24px #ff4d00',
+            boxShadow: '0 0 8px #d4af37',
           }}
           animate={{
             x: p.tx,
