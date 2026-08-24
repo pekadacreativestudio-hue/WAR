@@ -110,7 +110,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-[#e6d5c3] font-['Cinzel'] overflow-x-hidden selection:bg-[#c29c6d] selection:text-black" ref={containerRef}>
+    <div className="min-h-screen text-[#e6d5c3] font-cinzel overflow-x-hidden selection:bg-[#c29c6d] selection:text-black" ref={containerRef}>
       <ParticleBackground />
 
       <main className="relative z-10 flex flex-col items-center">
@@ -140,7 +140,7 @@ export default function App() {
               <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <span className="relative z-10 block text-xs tracking-[0.8em] font-['Montserrat'] font-medium text-[#c29c6d] group-hover:text-[#d4af37] transition-colors duration-700 uppercase drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
+              <span className="relative z-10 block text-xs tracking-[0.8em] font-montserrat font-medium text-[#c29c6d] group-hover:text-[#d4af37] transition-colors duration-700 uppercase drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
                 Accept
               </span>
             </motion.button>
@@ -151,7 +151,7 @@ export default function App() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="absolute bottom-12 flex flex-col items-center gap-4 text-[#c29c6d]/50 text-xs tracking-[0.5em] font-['Montserrat']"
+              className="absolute bottom-12 flex flex-col items-center gap-4 text-[#c29c6d]/50 text-xs tracking-[0.5em] font-montserrat"
             >
               <span className="animate-pulse">SCROLL TO REVEAL</span>
               <div className="relative w-px h-16 overflow-hidden">
@@ -198,10 +198,10 @@ export default function App() {
                   className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-[#c29c6d]/60 to-transparent origin-center" 
                 />
                 
-                <TextReveal delay={0.2} className="text-xs md:text-sm font-['Montserrat'] tracking-[0.6em] text-[#e6d5c3]/80 uppercase pt-6">
+                <TextReveal delay={0.2} className="text-xs md:text-sm font-montserrat tracking-[0.6em] text-[#e6d5c3]/80 uppercase pt-6">
                   A Special
                 </TextReveal>
-                <TextReveal delay={0.4} float={true} className="text-5xl md:text-8xl font-['Playfair_Display'] text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] leading-tight pb-6 drop-shadow-lg">
+                <TextReveal delay={0.4} float={true} className="text-5xl md:text-8xl font-playfair text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] leading-tight pb-6 drop-shadow-lg">
                   SATHDAMMA DESHANA
                 </TextReveal>
               </div>
@@ -209,28 +209,28 @@ export default function App() {
           </section>
 
           {/* Frame 4: By */}
-          <section className="min-h-screen w-full flex flex-col items-center justify-center p-6 text-center relative">
+          <section className="min-h-[50vh] md:min-h-screen w-full flex flex-col items-center justify-center p-6 text-center relative">
             <div className="flex flex-col items-center space-y-6">
-              <TextReveal delay={0.1} className="text-xs md:text-sm font-['Montserrat'] tracking-[0.6em] text-[#e6d5c3]/80 uppercase">
+              <TextReveal delay={0.1} className="text-xs md:text-sm font-montserrat tracking-[0.6em] text-[#e6d5c3]/80 uppercase">
                 By
               </TextReveal>
-              <TextReveal delay={0.3} float={true} className="text-5xl md:text-8xl font-['Playfair_Display'] text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] drop-shadow-lg">
+              <TextReveal delay={0.3} float={true} className="text-5xl md:text-8xl font-playfair text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] drop-shadow-lg">
                 Vimuththa Therani
               </TextReveal>
             </div>
           </section>
 
           {/* Frame 5 & 6: Date & Time */}
-          <section className="min-h-screen w-full flex flex-col items-center justify-center p-6 relative">
+          <section className="min-h-[60vh] md:min-h-screen w-full flex flex-col items-center justify-center p-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 w-full max-w-4xl">
               <div className="flex flex-col items-center text-center space-y-8 relative p-8 group">
                 <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#c29c6d]/20 transition-all duration-500" />
                 <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#c29c6d]/20 transition-all duration-500" />
                 
-                <TextReveal delay={0.1} className="text-xs md:text-sm font-['Montserrat'] tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
+                <TextReveal delay={0.1} className="text-xs md:text-sm font-montserrat tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
                   Date
                 </TextReveal>
-                <TextReveal delay={0.3} className="text-3xl md:text-5xl font-['Playfair_Display'] text-white">
+                <TextReveal delay={0.3} className="text-3xl md:text-5xl font-playfair text-white">
                   Sunday,<br />
                   <span className="text-[#d4af37]">30th August 2026</span>
                 </TextReveal>
@@ -240,12 +240,12 @@ export default function App() {
                 <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#c29c6d]/20 transition-all duration-500" />
                 <span className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#c29c6d]/20 transition-all duration-500" />
 
-                 <TextReveal delay={0.2} className="text-xs md:text-sm font-['Montserrat'] tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
+                 <TextReveal delay={0.2} className="text-xs md:text-sm font-montserrat tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
                   Time
                 </TextReveal>
-                <TextReveal delay={0.4} className="text-3xl md:text-5xl font-['Playfair_Display'] text-white leading-tight">
+                <TextReveal delay={0.4} className="text-3xl md:text-5xl font-playfair text-white leading-tight">
                   8:00 AM<br />
-                  <span className="text-sm font-['Montserrat'] tracking-[0.2em] text-[#e6d5c3]/60 uppercase my-4 block">To</span>
+                  <span className="text-sm font-montserrat tracking-[0.2em] text-[#e6d5c3]/60 uppercase my-4 block">To</span>
                   10:30 AM
                 </TextReveal>
               </div>
@@ -264,15 +264,15 @@ export default function App() {
                   className="absolute top-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent to-[#c29c6d]/60" 
                 />
                 
-                <TextReveal delay={0.1} className="flex flex-col items-center gap-3 text-xs md:text-sm font-['Montserrat'] tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
+                <TextReveal delay={0.1} className="flex flex-col items-center gap-3 text-xs md:text-sm font-montserrat tracking-[0.5em] text-[#e6d5c3]/80 uppercase">
                   <MapPin className="w-6 h-6 text-[#d4af37]" />
                   Location
                 </TextReveal>
                 <div className="flex flex-col items-center">
-                  <TextReveal delay={0.3} float={true} className="text-4xl md:text-6xl font-['Playfair_Display'] text-white leading-tight text-center">
+                  <TextReveal delay={0.3} float={true} className="text-4xl md:text-6xl font-playfair text-white leading-tight text-center">
                     MoonStone Amethyst Hall.
                   </TextReveal>
-                  <TextReveal delay={0.4} float={true} className="text-[#d4af37] italic font-light block mt-4 text-3xl md:text-5xl font-['Playfair_Display']">
+                  <TextReveal delay={0.4} float={true} className="text-[#d4af37] italic font-light block mt-4 text-3xl md:text-5xl font-playfair">
                     Hilton Colombo.
                   </TextReveal>
                 </div>
@@ -291,7 +291,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex-1 flex items-center justify-center gap-3 px-6 py-5 border border-[#c29c6d]/50 bg-black/40 backdrop-blur-sm text-[#c29c6d] text-xs font-['Montserrat'] font-medium tracking-[0.2em] transition-all hover:border-[#c29c6d] hover:bg-[#c29c6d]/10 relative group"
+                  className="flex-1 flex items-center justify-center gap-3 px-6 py-5 border border-[#c29c6d]/50 bg-black/40 backdrop-blur-sm text-[#c29c6d] text-xs font-montserrat font-medium tracking-[0.2em] transition-all hover:border-[#c29c6d] hover:bg-[#c29c6d]/10 relative group"
                 >
                   <MapPin className="w-4 h-4" />
                   <span>VIEW ON MAP</span>
@@ -303,7 +303,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex-1 flex items-center justify-center gap-3 px-6 py-5 border border-[#c29c6d]/50 bg-black/40 backdrop-blur-sm text-[#c29c6d] text-xs font-['Montserrat'] font-medium tracking-[0.2em] transition-all hover:border-[#c29c6d] hover:bg-[#c29c6d]/10 relative group"
+                  className="flex-1 flex items-center justify-center gap-3 px-6 py-5 border border-[#c29c6d]/50 bg-black/40 backdrop-blur-sm text-[#c29c6d] text-xs font-montserrat font-medium tracking-[0.2em] transition-all hover:border-[#c29c6d] hover:bg-[#c29c6d]/10 relative group"
                 >
                   <CalendarPlus className="w-4 h-4" />
                   <span>BOOK YOUR CALENDAR</span>
@@ -316,7 +316,7 @@ export default function App() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 1.5, duration: 1.5 }}
-              className="absolute bottom-12 text-[10px] font-['Montserrat'] text-[#c29c6d]/30 tracking-[0.5em] uppercase"
+              className="absolute bottom-12 text-[10px] font-montserrat text-[#c29c6d]/30 tracking-[0.5em] uppercase"
             >
               We look forward to your presence
             </motion.div>
