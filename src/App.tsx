@@ -128,7 +128,7 @@ export default function App() {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center text-center space-y-16"
           >
-            <TextReveal delay={0.2} float={true} className="text-4xl md:text-6xl tracking-[0.4em] text-transparent bg-clip-text bg-gradient-to-b from-white to-[#a88a64] drop-shadow-[0_0_30px_rgba(194,156,109,0.3)] font-light">
+            <TextReveal delay={0.2} float={true} className="text-4xl md:text-6xl tracking-[0.4em] text-[#e2cfae] drop-shadow-[0_0_30px_rgba(194,156,109,0.3)] font-light">
               YOU ARE INVITED
             </TextReveal>
             
@@ -207,7 +207,7 @@ export default function App() {
                 <TextReveal delay={0.2} className="text-xs md:text-sm font-montserrat tracking-[0.6em] text-[#e6d5c3]/95 uppercase pt-6">
                   A Special
                 </TextReveal>
-                <TextReveal delay={0.4} float={true} className="text-5xl md:text-8xl font-playfair text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] leading-tight pb-6 drop-shadow-lg">
+                <TextReveal delay={0.4} float={true} className="text-5xl md:text-8xl font-playfair text-[#e2cfae] leading-tight pb-6 drop-shadow-lg">
                   SATHDAMMA DESHANA
                 </TextReveal>
               </div>
@@ -220,7 +220,7 @@ export default function App() {
               <TextReveal delay={0.1} className="text-xs md:text-sm font-montserrat tracking-[0.6em] text-[#e6d5c3]/95 uppercase">
                 By
               </TextReveal>
-              <TextReveal delay={0.3} float={true} className="text-5xl md:text-8xl font-playfair text-transparent bg-clip-text bg-gradient-to-b from-white to-[#b09372] drop-shadow-lg">
+              <TextReveal delay={0.3} float={true} className="text-5xl md:text-8xl font-playfair text-[#e2cfae] drop-shadow-lg">
                 Vimuththa Therani
               </TextReveal>
             </div>
