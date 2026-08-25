@@ -109,9 +109,10 @@ export default function App() {
 
   const createGoogleCalendarLink = () => {
     const title = encodeURIComponent("A Special Sathdamma Deshana by Vimuththa Therani");
-    const dates = "20260830T080000Z/20260830T103000Z";
+    // 8:00-10:30 AM in Asia/Colombo (UTC+5:30), expressed in UTC
+    const dates = "20260830T023000Z/20260830T050000Z";
     const details = encodeURIComponent("A Special Sathdamma Deshana");
-    const location = encodeURIComponent("MoonStone Amethist Hall, Hilton Colombo");
+    const location = encodeURIComponent("MoonStone Amethyst Hall, Hilton Colombo");
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
   };
 
